@@ -1,0 +1,77 @@
+# dataset cfg file
+name: "general"
+data_dir: "/cache/datasets/cwc/dataset"
+buff: True            # if this is true we buffer buff_n images in a fifo
+buff_nr: 100          # number of images to keep in fifo (prefetch batch) <-should be bigger than batch size to make sense
+label_map: 
+  0: 'void'
+  1: 'Aeroplane'
+  2: 'Bicycle'
+  3: 'Bird'
+  4: 'Boat'
+  5: 'Bottle'
+  6: 'Bus'
+  7: 'Car'
+  8: 'Cat'
+  9: 'Chair'
+  10: 'Cow'
+  11: 'Diningtable'
+  12: 'Dog'
+  13: 'Horse'
+  14: 'Motorbike'
+  15: 'Person'
+  16: 'Pottedplant'
+  17: 'Sheep'
+  18: 'Sofa'
+  19: 'Train'
+  20: 'TVmonitor'
+label_remap:          # for softmax (it must be an index of the onehot array)
+  0: 0
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 5
+  6: 6
+  7: 7
+  8: 8
+  9: 9
+  10: 10
+  11: 11
+  12: 12
+  13: 13
+  14: 14
+  15: 15
+  16: 16
+  17: 17
+  18: 18
+  19: 19
+  20: 20
+color_map:            # bgr
+  0: [0,0,0]
+  1: [0,128,0]
+  2: [128,128,0]
+  3: [0,0,128]
+  4: [192,128,0]
+  5: [128,0,128]
+  6: [0,128,128]
+  7: [128,128,128]
+  8: [64,0,128]
+  9: [192,0,0]
+  10: [64,128,0]
+  11: [192,128,0]
+  12: [64,0,0]
+  13: [192,0,128]
+  14: [64,128,128]
+  15: [192,128,128]
+  16: [0,64,0]
+  17: [128,64,0]
+  18: [0,192,0]
+  19: [128,192,0]
+  20: [0,64,128]
+img_prop:
+  width: 512
+  height: 512
+  depth: 3            # number of channels in original image
+force_resize: True    # if dataset contains images of different size, it should be True
+force_remap: False    # if I want to clean the remap folder (for example, if I changed the image size)
