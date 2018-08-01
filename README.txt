@@ -12,3 +12,7 @@ accuracy 98.1%
 run predictPic.py to make a prediction on an image
 put own images under imgs folder
 run findAccuracy to find % accuracy of network
+
+extract_weights, load_weights and model are used to build the DeepLabv3+ model
+I wrote padding.py to just create a nice way to pad an image to the required dimension
+util.py contains some methods that I used for plotting and overlaying transparent images
